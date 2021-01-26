@@ -1,0 +1,15 @@
+
+<%@page import="com.evanwlee.web.framework.AppSession"%>
+<%@page import="com.evanwlee.tokens.MessageBoard"%><%
+	MessageBoard board = new MessageBoard();
+	try{
+		//session = request.getSession ();
+		board = (MessageBoard)request.getAttribute(AppSession.MESSAGE_BOARD);
+		if(board == null){
+			board = new MessageBoard();
+		}
+	}catch(Exception e){
+		
+	}
+%>
+

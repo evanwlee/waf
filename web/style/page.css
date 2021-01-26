@@ -1,0 +1,576 @@
+/* 
+ gray-html401.css 
+ Styles for expeditors internal web apps, HTML 4.01 valid doctype.
+ Used for applications developed after November, 2004.  Does not require
+ browser detection in JavaScript.  For more information about browser-specific
+ CSS hacks visit http://centricle.com/ref/css/filters/
+ M2, 10-14-2004
+
+ (C) 2004 Expeditors International of Washington, Inc.
+ All information contained herein is confidential and proprietary and may 
+ not be reproduced, used, manipulated, disclosed, copied or disseminated 
+ without Expeditors' prior written consent.
+
+*/
+
+/* inherited common font and color properties */
+body, div, p,  a, li, input, select, label, fieldset, legend, textarea, h1, h2, h3, h4, h5 {
+  /* all browsers */
+  font: normal x-small tahoma, helvetica, sans-serif;
+  color: #000;
+  /* ie 6 and moz only use simplified box model hack for content that follows */
+  f\ont-size: small;}
+pre, code {font: normal x-small "Courier New", Courier, monospace;
+  /* ie 6 and moz only */
+  f\ont-size: small;}
+  
+.rawFont{font: normal x-small "Courier New", Courier, monospace;
+  /* ie 6 and moz only */
+  f\ont-size: small;
+  font-size: .9em;
+} 
+
+/* common html tags */
+body {margin:10px 0 0 10px;
+  background-color: #fff;
+}
+a:link { color: #006; }
+a:visited { color: #006; }
+a:hover { color: #00f; }
+hr {color: #bebebf; width:95%; }
+pre {font-size: 85%;}
+code {font-size: 95%;}
+
+
+button.styledButton{
+	margin:7px 0 0 12px;
+	padding:1px 0 0 0;
+	/*width:60px;*/
+	/*height:23px;*/
+	FONT-SIZE: 10pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+	text-align:center;
+	border:1px solid #666;
+	background:#fff url(../img/input_bg.gif) 0 0px repeat-x;
+	}
+
+/* table tags */
+th.tableClass {background-color:#bebebf;
+  padding-left:2px; 
+  padding-right: 2px; 
+  margin: 1px;
+  vertical-align:bottom;
+  font-weight: bold;
+  font-size: .95em;}
+td.tableClass {line-height: .96em;}
+
+/* form element tags and classes */
+input, select {line-height: .96em;
+  border: 1px inset #e6e6e6;
+  border-top-width: 2px;
+  border-left-width: 2px;}
+th input {background-color: transparent;} /* input controls in table headers */
+button, .button {background-color:#ddd;
+  font-size: .95em;
+  line-height: .96em;
+  border: 2px solid #e0e0e0; 
+  border-color: #f5f5f5 #555 #555 #f5f5f5;
+  padding: 2px 0 0 0;
+  cursor: hand; 
+  /* ie 6 and moz only */
+  c\ursor: pointer;}
+span.disabled {cursor: text;}  
+/* moz only */
+html>body button, html>body .button {font-size: 1em;
+	padding: 2px 2px 1px 2px;}
+	
+fieldset {border: 1px solid #ccc; 
+  padding: 0 15px 15px 15px; 
+  margin: 0 10px;}
+label {line-height: .96em;}
+legend {padding: 10px;}
+textarea {border: 1px inset #e6e6e6;
+  line-height: .96em;}
+.read-only-style, .readonly {border-width:0; 
+  background-color: transparent;}
+.secured-style, .secured {border:solid #339;
+  border-width:1px; 
+  background-color:transparent;}
+.normal {background-color:#fff;}
+.data {vertical-align:top; 
+  margin: 1px; 
+  padding: 0 3px;}
+.iconbutton {border: 0; 
+  background-color: transparent; 
+  cursor: hand;
+  /* ie 6 and moz only */
+  c\ursor: pointer;}
+.required, .bold {font-weight: bold;}
+.underline {text-decoration: underline;}
+.underlineSecured {border-bottom: 1px solid #339;
+  text-decoration: underline;}
+.securedBox {border:1px solid #339; 
+  line-height: 1.05em;}
+.securedBoxBold {border:1px solid #339; 
+  line-height: 1.05em; 
+  font-weight: bold;}
+.toggleButtonDown {background-color:#ddd; 
+  height: 22px;
+  font-size: 11px;
+  line-height: .85em; 
+  padding: 0; 
+  margin: 0 0 0 2px;
+  border: 2px solid #555; 
+  border-color: #555 #f5f5f5 #f5f5f5 #555;}
+.toggleButtonUp {background-color:#ddd;
+  height: 22px;
+  font-size: 11px;
+  line-height:.85em; 
+  padding: 0; margin: 0 0 0 2px;
+  border: 2px solid #555; 
+  border-color: #f5f5f5 #555 #555 #f5f5f5;}
+
+/* heading tags */
+h1 {font-size: 115%; 
+  font-weight: bold;
+  letter-spacing: .07em;
+  padding: 10px 0; 
+  margin: 0;} /* page titles */
+h2 {font-weight: bold;
+  line-height: .85em; 
+  color: #333; 
+  padding: 15px 0 2px 0; 
+  margin: 0;} /* subtitles within page content */
+h3 {font-size: 95%; 
+  padding: 0 0 2px 0; 
+  margin: 0 0 0 15px;} /* screen header subtitle */
+
+/* box styles */  
+.box {width:95%; 
+  border: 1px solid #99999a; 
+  border-top-width: 2px;
+  padding: 5px; 
+  margin-bottom: 5px;}
+.smallbox {width: 95%; 
+  border: 1px solid #99999a; 
+  border-top-width: 2px;
+  padding: 2px;}
+.shadedbox {border: 1px solid #99999a; 
+  background-color: #ececec;
+  padding: 4px;}
+.nobox {width: 95%; 
+  border: 0px; 
+  padding: 5px; 
+  margin-bottom: 5px;} 
+.errorBox {width:95%;
+  background-color:#ffc;
+  border: 1px solid #99999a; 
+  border-top-width:2px;
+  margin-bottom:5px; 
+  padding:5px;}
+.errorHeader {letter-spacing: 0.1em;
+  font-weight: bold;}
+.noborder {border: 0;}
+.scrollvbox {overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 1px solid #bebebf;
+  font: normal x-small "Courier New", Courier, monospace;
+  font-size: 85%; 
+  /* ie 6 and moz only */
+  f\ont-size: small;
+  f\ont-size: 85%;}
+.scrollvboxSecured {overflow: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font: normal x-small "Courier New", Courier, monospace;
+  font-size: 85%; 
+  border: 1px solid #339;
+  /* ie 6 and moz only */
+  f\ont-size: small;
+  f\ont-size: 85%;}
+  
+/* special text classes */
+.warningSmall {color: #f00; }
+.caption {font-weight: bold;
+  text-align:left; 
+  letter-spacing: .1em;
+  padding-bottom: .75em;}
+.screenTitleContainer {padding: 0 0 10px 0;}  
+.screenTitle {font-weight: bold;
+  line-height:1.1em; 
+  font-size: 105%; 
+  letter-spacing: .05em;}
+.screenSubTitle {color: #333;
+  font-size: 95%;}
+.screenSubTitleRaised {font-weight: bold;
+  font-face: verdana, helvetica, sans-serif; 
+  font-size: 95%;
+  color: #333; 
+  position: relative; 
+  top: -9px; }
+.screenSectionTitle {font-weight: bold;
+  font-face: verdana, helvetica, sans-serif; 
+  line-height: .85em;
+  color: #333; 
+  padding: 1px;}
+.screenTitleContainer a {text-decoration: none;}
+.breadcrumbTitle {font-weight: bold;
+  line-height:1.1em; 
+  font-size: 105%; 
+  color: #f00;}
+a.breadcrumb {color: #006; 
+  text-decoration: underline; 
+  font-weight: bold;
+  line-height: 1.1em; 
+  font-size: 105%;}
+#caption A {color: #006;}
+#caption A:hover {color: #00f;}
+.tableCaption {text-align:left;}
+.appTitle {font: bold 20px tahoma, helvetica, sans-serif;}
+.parenthetic {font-size: 11px;}
+.smtext {font-size: 11px; }
+.smtextbold, .smallLabel {font-weight: bold;
+  font-size: 11px; }
+.printableHeader {font-weight:500; 
+  border-bottom:solid 1px #000;}
+.portalHeader {position:absolute; 
+  top:0px; 
+  left:0px; 
+  width:100%; 
+  background-color: #ececec;}
+.copyright {text-align: center; 
+  color: #333; 
+  width: 95%;
+  font-size: 9px;}
+.shaded {background-color: #ececec; 
+  padding: 3px;}
+.headerShaded {background-color:#bebebf;
+  padding: 0 2px;
+  margin: 1px;
+  vertical-align:bottom;
+  font-weight: bold;}
+.underlineBold {text-decoration: underline; 
+  font-weight: bold; }
+
+/* help styles */
+.help {position: absolute; 
+  top: 0; 
+  right:0;
+  background-color: #ececec; 
+  color: #fff;
+  padding: 0px 30px 5px 30px;}
+.help a:link {color: #006;}
+  /* inline Help style */
+.helptxt {font-style: italic; font-size: xx-small; white-space: nowrap;}
+.helptxtReq {font-weight: bold; font-style: italic; font-size: xx-small;}
+
+.help a:visited {color: #006;}
+.help a:hover {color: #00f;}
+
+/* top right nav */
+.topRightNavTable {position: relative; 
+  top: -9px; 
+  right: 0px;}
+.topRightNavCell {font-size: 11px; 
+  color: #99999a;
+  padding: 3px; 
+  margin-right: 0px; 
+  background-color: #ececec; 
+  border-bottom: 1px solid #99999a;}
+.topRightNavCellRect {font-size: 11px; 
+  color: #99999a; 
+  position: relative; 
+  top: -7px; 
+  right: 10px;
+  padding: 5px; 
+  padding-right: 10px; 
+  padding-left: 10px;
+  background-color: #ececec; 
+  border: 1px solid #99999a;
+  border-top: 0;}
+.topRightNavCell a, .topRightNavCellRect a {text-decoration: none;
+  font-size: 11px;}
+
+/* new quick search qs panels */
+.qsContainer {width: 95%; 
+  padding: 2px 0 4px 2px; 
+  margin: 0 0 5px 0;
+  text-align: right; 
+  line-height: 1.2em;
+  font-size: 11px;
+  /* ie 6 and moz */
+  w\idth: 96%;}
+.qsContainer a {font-size: 11px; 
+  text-decoration: none;}
+.qsBox {border: 1px solid #99999a; 
+  padding: 2px 1px; 
+  vertical-align: baseline;}
+/* moz only */
+html>body .qsBox {padding: 5px 5px 7px 5px;}
+/* moz only */
+html>body .qsBox .iconbutton {padding: 0;
+  margin: 0;}
+.qsBox img {vertical-align: middle;}
+.qsBox select {font-size: 11px; 
+  vertical-align: middle;}
+.qsBox button {vertical-align: middle;}
+.qsCurrent {color: #f00; 
+  font-weight: bold;}
+
+/* results paging controls */
+#ResultsForm {margin-top: 0px;}
+.pagingButtons {text-align: right; 
+  width: 95%; 
+  padding: 0 0 2px 0;
+  font-size: 11px;
+  margin-bot
+  }
+.pagingButtons .resultsHeader{text-align: left; 
+  vertical-align: text-bottom;
+  font-weight: bold;
+  position: relative; 
+  left: -5px;
+  
+  
+  }
+.pagingButtons select {font-size: 11px;}
+.pagingButtons button {font-size: 11px; 
+  height: 20px;
+  margin: 1px;}
+/* moz only */
+html>body .pagingButtons button {margin: 0;}
+
+/* wizard and search builder styles */
+.wizardSteps {background-color: #ececec; 
+  padding: 3px; 
+  width: 95%; 
+  margin-bottom: 3px;
+  border: 1px solid #99999a;}
+.wizardSteps tr td, .wizardSteps tr td input, .wizardSteps tr td button, .wizardSteps tr td a {
+  font-size: 11px;}
+table.wizardSteps .wizardHeader {font-weight: bold; 
+  padding-left: 5px;}
+.wizardSteps .current {color: #f00; 
+  font-weight: bold;
+	font-size: 11px;}
+.wizardSteps a {text-decoration: none;}
+
+/* javascript (old) tab styles */
+.jsTabActive {height: 20px; 
+  width: 150px;
+  background-color: #fff; 
+  color: #000;
+  padding: 0 5px 5px 5px; 
+  text-align: center;
+  border: 1px solid #99999a; 
+  border-bottom: 1px solid #fff;
+  position: relative; 
+  top: 1px; 
+  left: 10px; 
+  cursor: default; 
+  z-index: 2;  
+  /* ie 6 and moz only */
+  paddin\g: 0 30px 5px 30px;}
+.jsTabInActive {height: 20px; 
+  width: 150px;
+  text-align: center;
+  padding: 0 5px 5px 5px; 
+  border: 1px solid #99999a;
+  background-color: #ececec;
+  color: #006;
+  position: relative; 
+  top: 1px; 
+  left: 10px;
+  cursor: hand; 
+  text-decoration: none; 
+  z-index: 2;
+  /* ie 6 and moz only */
+  paddin\g: 0 30px 5px 30px;
+  c\ursor: pointer;}
+.jsTabInActive:hover {color: #00f;}
+.jsTabContentArea{border: 1px solid #99999a; 
+  position: relative; 
+  height: 200px; 
+  top: 0; 
+  padding: 5px; 
+  overflow: visible;
+  width: 95%;
+  /* ie 6 and moz only */
+  t\op: 6px;}
+/* moz only */
+html>body .jsTabContentArea {min-height: 200px; 
+  height: auto !important;}
+
+/* JSP (old) tab styles */ 
+.tabActive {height: 22px; 
+  width: 150px;
+  background-color: #fff;
+  padding: 0 5px 5px 5px;
+  text-align: center;
+  border: 1px solid #99999a; 
+  border-bottom: 1px solid #fff;}
+.tabInActive {height: 22px; 
+  width: 150px;
+  text-align: center;
+  padding: 0 5px 5px 5px;
+  border: 1px solid #99999a;
+  background-color: #ececec;}
+.tabInactiveEnabled {height: 20px; 
+  width: 150px;
+  padding: 0 5px 5px 5px;
+  background-color: #ececec;
+  z-index: -1;}
+.tabLink, .tabLink:visited, .tabLink:link {color: #006;}
+.tabLink:hover {color: #00f;}
+.tabContentArea{border: 1px solid #99999a; 
+  border-top: 0px none #fff;}
+.tabContainer {position: absolute;
+  width: 100%; 
+  height: 50px; 
+  top: 0; 
+  left: 0;
+  background-color: #B2B2B2;}
+.contentContainer {position: absolute;
+  width: 100%; 
+  height: 100%; 
+  top: 50px; 
+  left: 0;
+  background-color: #fff;
+  z-index: 1;}
+.tabSpacer {border-bottom: 1px solid #99999a;}
+.JSPTabInActive {height: 22px; 
+  width: 150px;
+  text-align: center;
+  padding: 0 5px 5px 5px;
+  border: 1px solid #99999a;
+  background-color: #ececec; 
+  color: #006; 
+  cursor: hand;
+  /* ie 6 and moz only */
+  c\ursor: pointer;}
+  
+  .fielderror {background-color:#ffc; font-size: xx-small; }  
+  
+/* MESSAGE BOXES */
+div.ErrorMessage, div.SuccessMessage{
+	width:94%;
+	margin:0 0 5px;
+	padding:5px;
+	background-color:#ffc;
+	border: 1px solid #99a; 
+	border-top-width:2px;
+}
+div.SuccessMessage{
+	background-color:#cff;
+}
+div.ErrorMessage h1, div.SuccessMessage h1,
+  div.ErrorMessage p, div.SuccessMessage p{
+	margin:0;
+	padding:0 0 0 20px;
+}
+div.ErrorMessage h1, div.SuccessMessage h1{
+	font-size: 105%;
+	color:#f00;
+	background:transparent url(../images/warning.gif) 0% 50% no-repeat;
+}
+div.SuccessMessage h1{
+	color:#000;
+	background-image:url(../images/information.gif);
+}
+/* MESSAGE BOXES */
+/* PAGING BUTTONS PLACEMENTS . REMOVES EXTRA FORM SPACE FROM THE BOTTOM */
+.pagingButtonPlacement {margin-bottom: -8px;}
+
+/* ERROR HI-LIGHTING */
+.qtyNotAllowed {background: #ffc;
+      font-weight: bold;
+      color: #f00;
+      border: 2px #f00 solid;
+    }
+.qtyRequiresApproval {background: #ffc;
+      font-weight: bold;
+      color: #f00;
+    }
+.qtyRequired {background: #ffc; color: #000;}
+.qtyNormal { width: 75px;}
+.emptyDefaultParty { width: 18px; height:18px; }
+.emptyDefaultLetterOfCredit { width: 18px; height:18px; }
+
+option.disabled {color: #999;}
+option.s_actionItem {padding-left: 20px;}
+.hiddenButton {
+  border: 0px; 
+  width: 0px; 
+  height: 0px;
+}
+
+table.selectedPOPaginationHack div.pagingButtons {position:relative; margin-bottom: -20px;}
+
+.popupTableHack table {width: 99%;}
+
+/* <-- BEGIN - STYLES USED IN THE BOOKING PROCESS NAVIGATION (ADDBOOKING_PAGING.JSP) */
+.bookingPageNav {font-size: .80em; margin-bottom: 5px;}
+.bookingPageNav a, .bookingPageNav table td {font-size: 1em}
+div#bookingPagingControls {height: 15px; line-height: 15px; width: 95%; margin-top: -10px}
+div#bookingToolBox {border: 1px #999 solid; width: 96%;margin-bottom:5px;margin-top: -14px}
+div#bookingToolBox table td {margin-top: 0px; padding: 0px 4px 4px 4px;}
+
+.disabledText {color: #848284;}
+.paging_selectedPage {color: #000;font-weight: bold;}
+/* <-- END - STYLES USED IN THE BOOKING PROCESS NAVIGATION */
+
+#bookingEventsTable {border: 1px #999 solid; width:96%; margin:  0 0 5px 0; }
+
+
+/* WORKING ON MARKS AND NUMBER SECTION */
+ .mnTitles {color: #999;font-variant: small-caps; font-weight: bold;}
+/* END WORKING ON MARKS AND NUMBERS */
+
+/*********************/
+
+.iconLink {position: relative; top: 3px;}
+/**********************/
+
+/* Booking Rules Details Page */
+    #contLegend {font-size:11px;}
+    .disabled {background-color: #ececec;}
+    .subHeading {text-align: left; background: #ddd;}
+    .sideHelp {padding-left: 10px; font-size: 11px;}
+/* Booking Rules Details Page */
+
+.ei_buttonStandardCtr {text-align: right;}
+
+.smHelpText {font-size: 11px;}
+.fauxLink {color: #006; text-decoration: underline;}
+
+
+#POButtonArea button {margin-bottom: 2px; font-size: .83em;}
+
+#templateControl {margin-bottom: 5px;}
+
+.fieldLabel {text-align: right;}
+
+    #MN_Dictionary input{width: 95%;}
+    .MN_Dict_list {height: 137px;  overflow: auto; border: 1px #999 solid;}
+    .MN_Dict_list ul {
+      list-style: none outside none; margin-left: 5px;
+    }
+    #CustomersTemplate textarea{background: #ececec; border: 1px #999 solid;}
+    .error {background: #ffc;}
+    
+    
+    
+.titlebar {background: #999; color: #fff; padding: 0 0 3px 5px;}
+
+.titlebar h2 { color: #fff;}
+
+    .disabledText {color: #848284;}
+    .enabledText {color: #000;}
+    .rowColorLight {background: #F5F5F5}
+    .rowColorDark {background: #dcdcdc}
+    .hardError {background: #ffc; border: 2px #f00 solid; color: #f00; font-weight: bold;}
+    
+    .errorSection { width:100%;
+  background-color:#ffffcc;  color: #000000; 
+  border: 1px solid #99999a; border-top-width:2px;
+  margin-bottom:0px;margin-left:0px;margin-right:0px; padding:5px;}
